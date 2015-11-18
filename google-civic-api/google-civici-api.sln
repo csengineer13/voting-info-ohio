@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "google-civici-api", "google
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "google-civici-api.Tests", "..\..\..\Users\Danny\Documents\Visual Studio 2013\Projects\google-civici-api\google-civici-api.Tests\google-civici-api.Tests.csproj", "{E0BB660D-FD8B-42E4-90DB-370056882276}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "google-civic-api.Service", "..\google-civic-api.Service\google-civic-api.Service.csproj", "{DB15C113-2474-4B1C-8FE9-F7EAC7923FEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "google-civic-api.Service.Tests", "google-civic-api.Service.Tests\google-civic-api.Service.Tests.csproj", "{BA282DB8-A6DF-479C-A35F-636BE21C3366}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{E0BB660D-FD8B-42E4-90DB-370056882276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0BB660D-FD8B-42E4-90DB-370056882276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0BB660D-FD8B-42E4-90DB-370056882276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB15C113-2474-4B1C-8FE9-F7EAC7923FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB15C113-2474-4B1C-8FE9-F7EAC7923FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB15C113-2474-4B1C-8FE9-F7EAC7923FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB15C113-2474-4B1C-8FE9-F7EAC7923FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA282DB8-A6DF-479C-A35F-636BE21C3366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA282DB8-A6DF-479C-A35F-636BE21C3366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA282DB8-A6DF-479C-A35F-636BE21C3366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA282DB8-A6DF-479C-A35F-636BE21C3366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
