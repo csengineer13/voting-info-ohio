@@ -25,3 +25,8 @@ General Election: They are held on the first Tuesday after the first Monday of N
 ## Requirements For Voting ##
 
 18+ (mostly)
+
+
+## APIs Used & Resources ##
+
+- [Google Civic API Explorer](https://developers.google.com/apis-explorer/#p/civicinfo/v2/)
