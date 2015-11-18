@@ -230,6 +230,9 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\google-civic-api.Service\google-civic-api.Service.csproj">
       <Project>{db15c113-2474-4b1c-8fe9-f7eac7923fea}</Project>
       <Name>google-civic-api.Service</Name>

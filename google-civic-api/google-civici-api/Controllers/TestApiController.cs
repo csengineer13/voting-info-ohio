@@ -40,7 +40,7 @@ namespace google_civici_api.Controllers
         // https://developers.google.com/civic-information/docs/v2/divisions/search
         public Task<DivisionSearchResponse> GetDivision()
         {
-            return _divisionQueryService.GetDivisions();
+            return _divisionQueryService.GetDivisions("oh");
         }
 
         [HttpGet]
