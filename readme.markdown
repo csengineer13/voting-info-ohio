@@ -29,4 +29,9 @@ General Election: They are held on the first Tuesday after the first Monday of N
 
 ## APIs Used & Resources ##
 
-- [Google Civic API Explorer](https://developers.google.com/apis-explorer/#p/civicinfo/v2/)
+
+#### Google Civic API ####
+
+- [General Info](https://developers.google.com/civic-information/)
+- [Nuget Install](https://www.nuget.org/packages/Google.Apis.CivicInfo.v2/)
+- [API Explorer](https://developers.google.com/apis-explorer/#p/civicinfo/v2/)
