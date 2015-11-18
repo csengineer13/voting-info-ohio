@@ -7,10 +7,12 @@ using Google.Apis.Services;
 
 namespace google_civici_api.Controllers
 {
+    [RoutePrefix("api/test")]
     public class TestApiController : ApiController
     {
         [HttpGet]
-        public async Task<ElectionsQueryResponse> Get()
+        [Route("elections")]
+        public async Task<ElectionsQueryResponse> GetElections()
         {
             var service = new CivicInfoService(new BaseClientService.Initializer
             {
@@ -18,18 +20,29 @@ namespace google_civici_api.Controllers
                 ApiKey = System.Configuration.ConfigurationManager.AppSettings["google-civic-api-server-key"]
             });
 
-            // Get List of valid election IDs
             var elections =  await service.Elections.ElectionQuery().ExecuteAsync();
+
+            return elections;
+        }
+
+        [HttpGet]
+        [Route("voter-info")]
+        public async Task<VoterInfoResponse> GetVoterInfo()
+        {
+            var service = new CivicInfoService(new BaseClientService.Initializer
+            {
+                ApplicationName = System.Configuration.ConfigurationManager.AppSettings["google-civic-api-project-name"],
+                ApiKey = System.Configuration.ConfigurationManager.AppSettings["google-civic-api-server-key"]
+            });
 
             var electionId = 2000;
             var testAddress = "1263 Pacific Ave. Kansas City KS";
 
             // Use voter's registered address to get info about specific election
-            //var voterInfoReq = service.Elections.VoterInfoQuery(testAddress);
-            //var voterInfo = await voterInfoReq.ExecuteAsync();
+            var voterInfoRequest = new ElectionsResource.VoterInfoQueryRequest(service, testAddress) { ElectionId = electionId };
+            var result = await voterInfoRequest.ExecuteAsync();
 
-            return elections;
-
+            return result;
         }
 
     }
