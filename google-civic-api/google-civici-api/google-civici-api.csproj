@@ -40,6 +40,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Google.Apis, Version=1.9.2.27817, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.9.2\lib\net40\Google.Apis.dll</HintPath>
       <Private>True</Private>
@@ -236,6 +240,14 @@
     <ProjectReference Include="..\..\google-civic-api.Service\google-civic-api.Service.csproj">
       <Project>{db15c113-2474-4b1c-8fe9-f7eac7923fea}</Project>
       <Name>google-civic-api.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\google-civic-api.Domain\google-civic-api.Domain.csproj">
+      <Project>{bb898f16-a76c-445d-8da7-cc879497e642}</Project>
+      <Name>google-civic-api.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\google-civic-api.ViewModel\google-civic-api.ViewModel.csproj">
+      <Project>{d7813086-e573-446b-b82e-87c78048103e}</Project>
+      <Name>google-civic-api.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
