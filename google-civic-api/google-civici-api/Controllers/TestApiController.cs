@@ -1,6 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Web.Http;
+using AutoMapper;
+using google_civic_api.Domain.Model.Test;
 using google_civic_api.Service.Domain.Query;
+using google_civic_api.ViewModel.DTO.Test;
 using Google.Apis.CivicInfo.v2.Data;
 
 namespace google_civici_api.Controllers
@@ -24,15 +28,27 @@ namespace google_civici_api.Controllers
         // https://developers.google.com/civic-information/docs/v2/elections/electionQuery
         public Task<ElectionsQueryResponse> GetElections()
         {
+            var aMapperTest = new Test
+            {
+                Id = Guid.NewGuid(),
+                Name = "testy test"
+            };
+
+            var mappedTest = Mapper.Map<TestDTO>(aMapperTest);
+
+
             return _electionQueryService.GetElections();
         }
 
         [HttpGet]
         [Route("voter-info")]
         // https://developers.google.com/civic-information/docs/v2/elections/voterInfoQuery
-        public Task<VoterInfoResponse> GetVoterInfo()
+        public async Task<VoterInfoResponse> GetVoterInfo()
         {
-            return _electionQueryService.GetVoterInfoByAddress("1968 Indianola Ave, Columbus OH");
+
+            var result = await _electionQueryService.GetVoterInfoByAddress("1968 Indianola Ave, Columbus OH");
+            return result;
+
         }
 
         [HttpGet]
@@ -46,10 +62,10 @@ namespace google_civici_api.Controllers
         [HttpGet]
         [Route("representative-info-by-address")]
         // https://developers.google.com/civic-information/docs/v2/representatives/representativeInfoByAddress
-        public Task<RepresentativeInfoResponse> GetRepresentativeInfoByAddress()
+        public async Task<RepresentativeInfoResponse> GetRepresentativeInfoByAddress()
         {
-
-            return _representativeQueryService.GetInfoByAddress("1968 Indianola Ave, Columbus OH");
+            var result = await _representativeQueryService.GetInfoByAddress("1968 Indianola Ave, Columbus OH");
+            return result;
         }
 
         [HttpGet]
