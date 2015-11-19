@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -199,28 +200,19 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="AppSettingsSecrets.config" />
-    <Content Include="AppSettingsSecrets.Debug.config">
-      <DependentUpon>AppSettingsSecrets.config</DependentUpon>
-    </Content>
-    <Content Include="AppSettingsSecrets.Release.config">
-      <DependentUpon>AppSettingsSecrets.config</DependentUpon>
-    </Content>
+    <Content Include="Toolkit\package.json" />
+    <Content Include="Toolkit\README.md" />
+    <Content Include="Toolkit\src\assets\fabricator\styles\fabricator.scss" />
+    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_code.scss" />
+    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_color-chips.scss" />
+    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_controls.scss" />
+    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_item.scss" />
+    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_layout.scss" />
+    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_menu.scss" />
+    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_variables.scss" />
+    <Content Include="Toolkit\src\assets\toolkit\styles\toolkit.scss" />
+    <Content Include="Toolkit\src\data\toolkit.yml" />
+    <Content Include="Toolkit\src\docs\javascript.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -250,11 +242,14 @@
       <Name>google-civic-api.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
