@@ -1,42 +1,44 @@
-﻿<!DOCTYPE html>
+﻿@using System.Configuration
+@using System.Web.Optimization
+@model google_civic_api.ViewModel.ViewModelNonGenericBase
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>todo: replace me</title>
+    <style type="text/css">
+        .hideUnbound {
+            display: none;
+        }
+    </style>
+    <!-- toolkit styles -->
+    @Styles.Render("~/Content/frontend-css")
+    <!-- /toolkit styles -->
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+    <!-- Icons -->
+    @*@Html.Partial("Components/_Icons")*@
+    <!-- /icons -->
+
+    <div class="container">
+        @*@Html.Partial("Components/_Header")*@
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        @*@Html.Partial("Components/_Footer")*@
+        @RenderSection("Modals", required: false)
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!-- toolkit scripts -->
+    @Scripts.Render("~/bundles/frontendjs")
+    <!-- /toolkit scripts -->
+    @if (Model != null)
+    {
+    <script type="text/javascript">
+        window.appnamespace = 'vote';
+        (function () {
+            vpte['@Model.Title'] = new vote['@Model.Title'](@Html.Raw(Model.ToJson()));
+        }(window[window.appnamespace] = window[window.appnamespace] || {}));
+    </script>
+    }
 </body>
 </html>

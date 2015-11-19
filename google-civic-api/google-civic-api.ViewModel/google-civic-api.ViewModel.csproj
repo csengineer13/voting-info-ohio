@@ -47,6 +47,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -79,13 +83,17 @@
   <ItemGroup>
     <Compile Include="AutoMapper\ConfigMapper.cs" />
     <Compile Include="AutoMapper\Mappings\TestMapping.cs" />
+    <Compile Include="Base\ViewModelNonGenericBase.cs" />
+    <Compile Include="Common\ColumnData.cs" />
+    <Compile Include="Common\Format.cs" />
+    <Compile Include="Common\KOMapping.cs" />
+    <Compile Include="Common\SimpleError.cs" />
+    <Compile Include="Common\SimpleModelState.cs" />
     <Compile Include="DTO\Test\TestDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AutoMapper\Resolvers\" />
-    <Folder Include="Base\" />
-    <Folder Include="Common\" />
     <Folder Include="Interfaces\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
