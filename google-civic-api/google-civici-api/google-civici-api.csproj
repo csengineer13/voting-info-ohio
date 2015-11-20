@@ -191,32 +191,53 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
-    <Content Include="Toolkit\package.json" />
-    <Content Include="Toolkit\README.md" />
-    <Content Include="Toolkit\src\assets\fabricator\styles\fabricator.scss" />
-    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_code.scss" />
-    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_color-chips.scss" />
-    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_controls.scss" />
-    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_item.scss" />
-    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_layout.scss" />
-    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_menu.scss" />
-    <Content Include="Toolkit\src\assets\fabricator\styles\partials\_variables.scss" />
-    <Content Include="Toolkit\src\assets\toolkit\styles\toolkit.scss" />
-    <Content Include="Toolkit\src\data\toolkit.yml" />
-    <Content Include="Toolkit\src\docs\javascript.md" />
+    <Content Include="gulpfile.js" />
+    <Content Include="javascript\bootstrap.js" />
+    <Content Include="javascript\bootstrap.min.js" />
+    <Content Include="AppSettingsSecrets.config" />
+    <Content Include="AppSettingsSecrets.Debug.config" />
+    <Content Include="AppSettingsSecrets.Release.config" />
+    <None Include="javascript\jquery-1.10.2.intellisense.js" />
+    <Content Include="javascript\jquery-1.10.2.js" />
+    <Content Include="javascript\jquery-1.10.2.min.js" />
+    <Content Include="javascript\jquery-2.1.4.js" />
+    <Content Include="javascript\modernizr-2.6.2.js" />
+    <Content Include="javascript\respond.js" />
+    <Content Include="javascript\respond.min.js" />
+    <Content Include="Scripts\front-end-app.js" />
+    <Content Include="Toolkit\dist\assets\fabricator\scripts\f.js" />
+    <Content Include="Toolkit\dist\assets\fabricator\styles\f.css" />
+    <Content Include="Toolkit\dist\assets\toolkit\scripts\toolkit.js" />
+    <Content Include="Toolkit\dist\assets\toolkit\styles\toolkit.css" />
+    <Content Include="Toolkit\dist\components.html" />
+    <Content Include="Toolkit\dist\docs.html" />
+    <Content Include="Toolkit\dist\favicon.ico" />
+    <Content Include="Toolkit\dist\index.html" />
+    <Content Include="Toolkit\dist\pages.html" />
+    <Content Include="Toolkit\dist\pages\home.html" />
+    <Content Include="Toolkit\dist\structures.html" />
+    <Content Include="javascript\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Web.config" />
+    <Content Include="package.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\app\" />
+    <Folder Include="Scripts\lib\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -243,12 +264,47 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\TS\Base\Form.ts" />
+    <TypeScriptCompile Include="Scripts\TS\Base\KoBindingExtensions.ts" />
+    <TypeScriptCompile Include="Scripts\TS\Base\Mapper.ts" />
+    <TypeScriptCompile Include="Scripts\TS\Base\Router.ts" />
+    <TypeScriptCompile Include="Scripts\TS\Base\Table.ts" />
+    <TypeScriptCompile Include="Scripts\TS\Base\VMBase.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\bootstrap\bootstrap.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\custom\Custom.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\custom\RoleDetail.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\Interfaces.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\jquery.fileupload\jquery.fileupload.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\js-cookie.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\kendo\kendo.datetime.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\kendo\kendo.editor.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\knockout.extensions.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\knockout.mapping\knockout.mapping.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\knockout.viewmodel\knockout.viewmodel.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\knockout\knockout.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\lodash.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\moment-datapicker.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\moment.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\numeraljs.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\sammyjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\definitions\select2.d.ts" />
+    <TypeScriptCompile Include="Scripts\TS\Test\Test.ts" />
+    <TypeScriptCompile Include="Scripts\TS\Test\TestRouter.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir>C:\code\voting\google-civic-api\google-civici-api\Scripts\app</TypeScriptOutDir>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />

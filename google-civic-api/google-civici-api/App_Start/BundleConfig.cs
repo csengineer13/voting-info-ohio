@@ -12,10 +12,6 @@ namespace google_civici_api
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                 "~/Scripts/lib/jquery-1.10.2.js",
                 "~/Scripts/lib/bootstrap.js"
-                //"~/Scripts/lib/select2.js",
-                //"~/Scripts/lib/jquery.fileupload/jquery.fileupload.js",
-                //"~/Scripts/lib/jquery.fileupload/vendor/jquery.ui.widget.js",
-                //"~/Scripts/bundle.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/frontendjs")
