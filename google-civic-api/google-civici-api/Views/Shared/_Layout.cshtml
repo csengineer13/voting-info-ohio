@@ -13,7 +13,8 @@
         }
     </style>
     <!-- toolkit styles -->
-    @Styles.Render("~/Content/frontend-css")
+    @Styles.Render("~/Content/vendor-and-toolkit-css")
+    @Styles.Render("~/Content/site-css")
     <!-- /toolkit styles -->
 </head>
 <body>
@@ -29,14 +30,15 @@
     </div>
 
     <!-- toolkit scripts -->
-    @Scripts.Render("~/bundles/frontendjs")
+    @Scripts.Render("~/bundles/vendor-and-toolkit-js")
+    @Scripts.Render("~/bundles/site-js")
     <!-- /toolkit scripts -->
     @if (Model != null)
     {
     <script type="text/javascript">
         window.appnamespace = 'vote';
         (function () {
-            vpte['@Model.Title'] = new vote['@Model.Title'](@Html.Raw(Model.ToJson()));
+            vote['@Model.Title'] = new vote['@Model.Title'](@Html.Raw(Model.ToJson()));
         }(window[window.appnamespace] = window[window.appnamespace] || {}));
     </script>
     }
