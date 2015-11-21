@@ -177,6 +177,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestApiController.cs" />
     <Compile Include="Global.asax.cs">
@@ -185,26 +186,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <None Include="Content\sass\site.scss" />
+    <Content Include="Content\css\site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="gulpfile.js" />
-    <Content Include="javascript\bootstrap.js" />
-    <Content Include="javascript\bootstrap.min.js" />
     <Content Include="AppSettingsSecrets.config" />
     <Content Include="AppSettingsSecrets.Debug.config" />
     <Content Include="AppSettingsSecrets.Release.config" />
-    <None Include="javascript\jquery-1.10.2.intellisense.js" />
-    <Content Include="javascript\jquery-1.10.2.js" />
-    <Content Include="javascript\jquery-1.10.2.min.js" />
-    <Content Include="javascript\jquery-2.1.4.js" />
-    <Content Include="javascript\modernizr-2.6.2.js" />
-    <Content Include="javascript\respond.js" />
-    <Content Include="javascript\respond.min.js" />
-    <Content Include="Scripts\front-end-app.js" />
+    <Content Include="bower.json" />
+    <Content Include="Scripts\site.js" />
+    <Content Include="Scripts\vendor.js" />
     <Content Include="Toolkit\dist\assets\fabricator\scripts\f.js" />
     <Content Include="Toolkit\dist\assets\fabricator\styles\f.css" />
     <Content Include="Toolkit\dist\assets\toolkit\scripts\toolkit.js" />
@@ -216,7 +209,6 @@
     <Content Include="Toolkit\dist\pages.html" />
     <Content Include="Toolkit\dist\pages\home.html" />
     <Content Include="Toolkit\dist\structures.html" />
-    <Content Include="javascript\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -236,8 +228,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\app\" />
-    <Folder Include="Scripts\lib\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -262,35 +252,6 @@
       <Project>{d7813086-e573-446b-b82e-87c78048103e}</Project>
       <Name>google-civic-api.ViewModel</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\TS\Base\Form.ts" />
-    <TypeScriptCompile Include="Scripts\TS\Base\KoBindingExtensions.ts" />
-    <TypeScriptCompile Include="Scripts\TS\Base\Mapper.ts" />
-    <TypeScriptCompile Include="Scripts\TS\Base\Router.ts" />
-    <TypeScriptCompile Include="Scripts\TS\Base\Table.ts" />
-    <TypeScriptCompile Include="Scripts\TS\Base\VMBase.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\bootstrap\bootstrap.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\custom\Custom.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\custom\RoleDetail.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\Interfaces.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\jquery.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\jquery.fileupload\jquery.fileupload.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\js-cookie.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\kendo\kendo.datetime.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\kendo\kendo.editor.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\knockout.extensions.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\knockout.mapping\knockout.mapping.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\knockout.viewmodel\knockout.viewmodel.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\knockout\knockout.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\lodash.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\moment-datapicker.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\moment.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\numeraljs.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\sammyjs.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\definitions\select2.d.ts" />
-    <TypeScriptCompile Include="Scripts\TS\Test\Test.ts" />
-    <TypeScriptCompile Include="Scripts\TS\Test\TestRouter.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

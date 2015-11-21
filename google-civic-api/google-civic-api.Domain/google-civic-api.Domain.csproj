@@ -73,15 +73,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\AggregateRoot.cs" />
+    <Compile Include="Base\EntityBase.cs" />
+    <Compile Include="Base\ModifiableEntityBase.cs" />
+    <Compile Include="Interfaces\IAggregateRoot.cs" />
+    <Compile Include="Interfaces\ICreatable.cs" />
+    <Compile Include="Interfaces\IEntityBase.cs" />
+    <Compile Include="Interfaces\IModifiable.cs" />
+    <Compile Include="Model\Home\Home.cs" />
     <Compile Include="Model\Test\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Base\" />
     <Folder Include="Common\" />
     <Folder Include="EnumAndConstants\" />
     <Folder Include="Exceptions\" />
-    <Folder Include="Interfaces\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

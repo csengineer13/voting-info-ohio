@@ -83,19 +83,33 @@
   <ItemGroup>
     <Compile Include="AutoMapper\ConfigMapper.cs" />
     <Compile Include="AutoMapper\Mappings\TestMapping.cs" />
+    <Compile Include="Base\IViewModelBase.cs" />
+    <Compile Include="Base\SearchFilterBase.cs" />
+    <Compile Include="Base\ViewModelBase.cs" />
+    <Compile Include="Base\ViewModelMetaBase.cs" />
     <Compile Include="Base\ViewModelNonGenericBase.cs" />
     <Compile Include="Common\ColumnData.cs" />
     <Compile Include="Common\Format.cs" />
     <Compile Include="Common\KOMapping.cs" />
     <Compile Include="Common\SimpleError.cs" />
     <Compile Include="Common\SimpleModelState.cs" />
+    <Compile Include="DTO\Common\PageInfoDto.cs" />
+    <Compile Include="DTO\Home\HomeDetailDto.cs" />
+    <Compile Include="DTO\Home\HomeDto.cs" />
     <Compile Include="DTO\Test\TestDTO.cs" />
+    <Compile Include="Interfaces\ICommandServiceBase.cs" />
+    <Compile Include="Interfaces\IDto.cs" />
+    <Compile Include="Interfaces\IViewModelServices.cs" />
+    <Compile Include="Interfaces\ServiceQueryParametersWithFilter.cs" />
+    <Compile Include="Interfaces\Services\Command\IHomeViewModelCommandServices.cs" />
+    <Compile Include="Interfaces\Services\Query\IHomeViewModelQueryServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Filter\HomeSearchFilter.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\Meta\HomeViewModelMeta.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AutoMapper\Resolvers\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\google-civic-api.Domain\google-civic-api.Domain.csproj">
