@@ -122,16 +122,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\GoogleQueryServiceBase.cs" />
+    <Compile Include="Base\ViewModelQueryServiceBase.cs" />
+    <Compile Include="Base\ViewModelServiceBase.cs" />
     <Compile Include="Domain\Query\RepresentativeQueryService.cs" />
     <Compile Include="Domain\Query\DivisionQueryService.cs" />
     <Compile Include="Domain\Query\ElectionQueryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\Query\DivisionViewModelQuesryService.cs" />
+    <Compile Include="ViewModel\Query\DivisionViewModelQueryService.cs" />
+    <Compile Include="ViewModel\Query\HomeViewModelQueryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Aspects\" />
     <Folder Include="Domain\Command\" />
     <Folder Include="ViewModel\Command\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\google-civic-api\google-civic-api.Domain\google-civic-api.Domain.csproj">
+      <Project>{bb898f16-a76c-445d-8da7-cc879497e642}</Project>
+      <Name>google-civic-api.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\google-civic-api\google-civic-api.ViewModel\google-civic-api.ViewModel.csproj">
+      <Project>{d7813086-e573-446b-b82e-87c78048103e}</Project>
+      <Name>google-civic-api.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

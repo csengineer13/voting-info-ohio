@@ -5,7 +5,7 @@ using System.Web;
 
 namespace google_civic_api.Service.ViewModel.Query
 {
-    public class DivisionViewModelQuesryService
+    public class DivisionViewModelQueryService
     {
         // get meta
         // get detail

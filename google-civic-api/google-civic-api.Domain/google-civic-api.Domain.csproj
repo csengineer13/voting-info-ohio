@@ -76,6 +76,7 @@
     <Compile Include="Base\AggregateRoot.cs" />
     <Compile Include="Base\EntityBase.cs" />
     <Compile Include="Base\ModifiableEntityBase.cs" />
+    <Compile Include="Common\WebConfigValues.cs" />
     <Compile Include="Interfaces\IAggregateRoot.cs" />
     <Compile Include="Interfaces\ICreatable.cs" />
     <Compile Include="Interfaces\IEntityBase.cs" />
@@ -85,7 +86,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\" />
     <Folder Include="EnumAndConstants\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>

@@ -5,6 +5,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using google_civici_api.App_Start;
 using google_civic_api.ViewModel.AutoMapper;
+using google_civic_api.Domain.Common;
 
 namespace google_civici_api
 {
@@ -24,7 +25,7 @@ namespace google_civici_api
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters); // We do this in DI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
