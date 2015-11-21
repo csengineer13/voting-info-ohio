@@ -9,28 +9,24 @@ namespace google_civici_api
         public static void RegisterBundles(BundleCollection bundles)
         {
             // JS
-            bundles.Add(new ScriptBundle("~/bundles/js").Include(
-                "~/Scripts/lib/jquery-1.10.2.js",
-                "~/Scripts/lib/bootstrap.js"
-                ));
-
-            bundles.Add(new ScriptBundle("~/bundles/frontendjs")
+            bundles.Add(new ScriptBundle("~/bundles/vendor-and-toolkit-js")
+                .Include("~/Scripts/vendor.js")
                 .Include("~/Toolkit/dist/assets/toolkit/scripts/toolkit.js")
-                .Include("~/Scripts/front-end-bundle.js")
-                .Include("~/Scripts/global-frontend.js")
+                );
+
+            bundles.Add(new ScriptBundle("~/bundles/site-js")
+                .Include("~/Scripts/site.js")
                 );
             
             // CSS
-            bundles.Add(new StyleBundle("~/Content/css")
-                .Include("~/Content/select2.css")
-                .Include("~/Content/bootstrap.css")
-                .Include("~/Content/Site.css")
+            bundles.Add(new StyleBundle("~/Content/vendor-and-toolkit-css")
+                .Include("~/Content/vendor.css")
+                .Include("~/Toolkit/dist/assets/toolkit/styles/toolkit.css")
                 );
 
-            bundles.Add(new StyleBundle("~/Content/frontend-css")
-                .Include("~/Content/style.css",
-                "~/Toolkit/dist/assets/toolkit/styles/toolkit.css"
-                ));
+            bundles.Add(new StyleBundle("~/Content/site-css")
+                .Include("~/Content/site.css")
+                );
         }
     }
 }

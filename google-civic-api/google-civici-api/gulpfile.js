@@ -10,10 +10,24 @@ var changed		= require('gulp-changed');		// Only files that have changed...
 var sass 		= require('gulp-sass');
 
 
+var config = {
+	scripts: [
+		'bower_components/jquery/dist/jquery.js',
+		'bower_components/knockout/dist/knockout.js',
+		'bower_components/js-cookie/src/js.cookie.js'
+	]
+};
+
 // Clean output directories
 gulp.task('clean', function() {
     return gulp.src('build', { read: false })
         .pipe(clean());
+});
+
+gulp.task('default', function() {
+  return gulp.src(config.scripts)
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('Scripts'));
 });
 
 
