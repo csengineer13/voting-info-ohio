@@ -65,8 +65,15 @@ We are using a "Client Library" to make requesting information easier, and servi
 
 ## To Do: ##
 
+- Implement dependency injection
+	- Get project to build
+- Whittle "Home" down to an MVP example/test
+- Spend time planning UI/UX + AggregateRoots and Domain Entities
+- Rename "Home" to semething we can use after ARs are decided
+- Implement Sammy Routes
+- Get KO firing, and working with areas
 - Remove Google API references from core
-- Create a VM/Model project that is shared by all
+- ~~Create a VM/Model project that is shared by all~~
 - Create batch queries to pull info based on scenarios
-- Create sub-repo for the Toolkit
+- ~~Create sub-repo for the Toolkit~~
 - Create a "how to contribute" guide
