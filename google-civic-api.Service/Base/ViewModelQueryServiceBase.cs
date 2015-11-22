@@ -2,11 +2,11 @@
 using google_civic_api.Domain.Interfaces;
 using google_civic_api.ViewModel;
 using google_civic_api.ViewModel.Interfaces;
-using log4net.Core;
 
 namespace google_civic_api.Service.Base
 {
-    public class ViewModelQueryServiceBase<AR, VM, Dto, DDto, REPO, TId, TFilter> : ViewModelServiceBase<AR, VM, Dto, DDto, TId, TFilter>, IGenericQueryService<VM, TId>
+    //public class ViewModelQueryServiceBase<AR, VM, Dto, DDto, REPO, TId, TFilter> : ViewModelServiceBase<AR, VM, Dto, DDto, TId, TFilter>, IGenericQueryService<VM, TId>
+    public class ViewModelQueryServiceBase<AR, VM, Dto, DDto, TId, TFilter> : ViewModelServiceBase<AR, VM, Dto, DDto, TId, TFilter>, IGenericQueryService<VM, TId>
         where AR : class, IAggregateRoot<TId>, new()
         where VM : IViewModelBase<Dto, DDto, TId>, new()
         where Dto : class, IDto<TId>, new()
@@ -15,7 +15,7 @@ namespace google_civic_api.Service.Base
         //where TFilter : new()
     {
 
-        protected readonly REPO _repo;
+        //protected readonly REPO _repo;
 
         //public ViewModelQueryServiceBase(IUnitOfWork unitOfWork, IUser user, IRepositoryWrapper repositories, REPO repo, IDomainServices domainServices, int limit = 1000)
         //    : base(unitOfWork, user, repositories, domainServices, limit)

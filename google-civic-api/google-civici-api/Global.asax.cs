@@ -13,7 +13,7 @@ namespace google_civici_api
     {
         protected void Application_Start()
         {
-            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None;
+            //GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None;
 
             var webConfig = new WebConfigValues
             {
@@ -25,7 +25,7 @@ namespace google_civici_api
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters); // We do this in DI
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters); // We do this in DI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 

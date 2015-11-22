@@ -2,7 +2,7 @@
 {
     public interface IViewModelServices
     {
-        IHomeViewModelQueryService HomwViewModelQueryService { get; }
-        IHomeViewModelCommandService HomwViewModelCommandService { get; }
+        IHomeViewModelQueryService HomeViewModelQueryService { get; }
+        IHomeViewModelCommandService HomeViewModelCommandService { get; }
     }
 }

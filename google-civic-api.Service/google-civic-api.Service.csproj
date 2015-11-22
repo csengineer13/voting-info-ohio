@@ -122,19 +122,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\GoogleQueryServiceBase.cs" />
+    <Compile Include="Base\ViewModelCommandServiceBase.cs" />
     <Compile Include="Base\ViewModelQueryServiceBase.cs" />
     <Compile Include="Base\ViewModelServiceBase.cs" />
     <Compile Include="Domain\Query\RepresentativeQueryService.cs" />
     <Compile Include="Domain\Query\DivisionQueryService.cs" />
     <Compile Include="Domain\Query\ElectionQueryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModelServices.cs" />
+    <Compile Include="ViewModel\Command\HomeViewModelCommandService.cs" />
     <Compile Include="ViewModel\Query\DivisionViewModelQueryService.cs" />
     <Compile Include="ViewModel\Query\HomeViewModelQueryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Aspects\" />
     <Folder Include="Domain\Command\" />
-    <Folder Include="ViewModel\Command\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\google-civic-api\google-civic-api.Domain\google-civic-api.Domain.csproj">

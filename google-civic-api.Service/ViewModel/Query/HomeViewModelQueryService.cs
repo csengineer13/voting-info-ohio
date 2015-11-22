@@ -11,7 +11,8 @@ using google_civic_api.ViewModel.ViewModels.Filter;
 
 namespace google_civic_api.Service.ViewModel.Query
 {
-    public class HomeViewModelQueryService : ViewModelQueryServiceBase<Home, HomeViewModel, HomeDto, HomeDetailDto, IHomeRepository, Guid, HomeSearchFilter>, IHomeViewModelQueryService
+    //public class HomeViewModelQueryService : ViewModelQueryServiceBase<Home, HomeViewModel, HomeDto, HomeDetailDto, IHomeRepository, Guid, HomeSearchFilter>, IHomeViewModelQueryService
+    public class HomeViewModelQueryService : ViewModelQueryServiceBase<Home, HomeViewModel, HomeDto, HomeDetailDto, Guid, HomeSearchFilter>, IHomeViewModelQueryService
     {
         //public HomeViewModelQueryService(IUnitOfWork unitOfWork, IUserControlDesignerAccessor user, IRepositoriesWrapper repositories, IDomainServices domainServices)
         //    : base(unitOfWork, user, repositories, repositories.HomeRepository, domainServices, 1000)

@@ -1,4 +1,5 @@
 ﻿using google_civici_api.Common;
+using google_civic_api.Service.ViewModel.Command;
 using google_civic_api.Service.ViewModel.Query;
 using google_civic_api.ViewModel.Interfaces;
 using Microsoft.Practices.Unity;

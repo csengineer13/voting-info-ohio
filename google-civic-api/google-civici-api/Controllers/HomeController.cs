@@ -13,7 +13,7 @@ namespace google_civici_api.Controllers
 
         public ActionResult Index()
         {
-            return View(Services.HomwViewModelQueryService.GetMeta());
+            return View(Services.HomeViewModelQueryService.GetMeta());
         }
     }
 }
