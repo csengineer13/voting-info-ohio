@@ -1,4 +1,5 @@
-﻿// Global namespace (name of our app)
+﻿
+// Global namespace (name of our app)
 vote = {};
 
 function extend(base, sub) {
@@ -36,8 +37,7 @@ var VmBase = (function() {
 
     VmBase.prototype.setupBindings = function () { }
     VmBase.prototype.mapInitData = function (data) {
-        console.log(data);
-        //mapper.fromJsToModel(data, this);
+        ko.mappng.fromJS(data, data.KOMapping, this);
     };
     VmBase.prototype.setNewItem = function () {
         console.log(this.ItemDetail);
