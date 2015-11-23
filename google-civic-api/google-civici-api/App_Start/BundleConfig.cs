@@ -15,6 +15,7 @@ namespace google_civici_api
                 );
 
             bundles.Add(new ScriptBundle("~/bundles/site-js")
+                .Include("~/Scripts/app.js")
                 .Include("~/Scripts/site.js")
                 );
             
