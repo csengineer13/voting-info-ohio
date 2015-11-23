@@ -214,6 +214,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Scripts\app.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\sass\site.scss" />
