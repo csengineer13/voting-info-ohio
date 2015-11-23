@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using google_civic_api.Domain.Interfaces;
 using google_civic_api.ViewModel;
 using google_civic_api.ViewModel.Interfaces;
@@ -41,7 +42,7 @@ namespace google_civic_api.Service.Base
 
         public virtual VM GetMeta()
         {
-           // _vm.PageInfo = Mapper.Map<PageInfoDto>(new PageInfo());
+            //_vm.PageInfo = Mapper.Map<PageInfoDto>(new PageInfo());
             return _vm;
         }
     }

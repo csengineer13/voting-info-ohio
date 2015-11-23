@@ -13,6 +13,7 @@ namespace google_civic_api.Service
             IHomeViewModelQueryService homeViewModelQueryService,
             IHomeViewModelCommandService homeViewModelCommandService)
         {
+            // Private set
             HomeViewModelQueryService = homeViewModelQueryService;
             HomeViewModelCommandService = homeViewModelCommandService;
         }
