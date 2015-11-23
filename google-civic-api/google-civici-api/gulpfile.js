@@ -14,7 +14,8 @@ var config = {
 	scripts: [
 		'bower_components/jquery/dist/jquery.js',
 		'bower_components/knockout/dist/knockout.js',
-		'bower_components/js-cookie/src/js.cookie.js'
+		'bower_components/js-cookie/src/js.cookie.js',
+		'bower_components/bower-knockout-mapping/dist/knockout.mapping.js'
 	]
 };
 

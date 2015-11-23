@@ -16,6 +16,7 @@
   "dependencies": {
     "knockout": "~3.4.0",
     "js-cookie": "~2.0.4",
-    "jquery": "jQuery#~2.1.4"
+    "jquery": "jQuery#~2.1.4",
+    "bower-knockout-mapping": "~2.5.0"
   }
 }
