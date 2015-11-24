@@ -54,7 +54,7 @@ A list of where we're getting our information, and some basics on how to query/s
 
 ### 1. Google Civic Information API ###
 
-Google's Civic Information API aggregates information from many sources. It has three resources it cares about: Candidates, Elections, and Divisions. It uses some under-the-hood magic to determine what it should hand us when it has conflicting sources; unless overridden, we receive what Google determines to be the "best" information for a given request.
+Google's Civic Information API aggregates information from many sources. It has three resources it cares about: **Candidates, Elections, and Divisions**. It uses some under-the-hood magic to determine what it should hand us when it has conflicting sources; unless overridden, we receive what Google determines to be the "best" information for a given request.
 
 We are using a "Client Library" to make requesting information easier, and service account so our users don't need to authenticate. We'll need to implement chaching at some point so we don't hit API Quota limits.
 
@@ -62,6 +62,18 @@ We are using a "Client Library" to make requesting information easier, and servi
 - [General Info](https://developers.google.com/civic-information/)
 - [Nuget Install](https://www.nuget.org/packages/Google.Apis.CivicInfo.v2/)
 - [API Explorer](https://developers.google.com/apis-explorer/#p/civicinfo/v2/)
+
+### Other Government APIs ###
+
+- [OpenSecrets.org](http://www.opensecrets.org/resources/create/apis.php)
+	- House/Senate members and source of financial contributions
+- [BillPositions](http://maplight.org/apis/bill-positions)
+- [VoteSmart.org](http://votesmart.org/share/api#.VlSZyvmrSXA)
+	- Voting history, and some overlap with Google Civic API
+- [GovTrack.us](https://www.govtrack.us/developers/data)
+	- Current Committee Assignments, Bills, Amendments, and Votes
+- [FollowTheMoney.org](http://www.followthemoney.org/our-data/apis/support/)
+- [Sunlight Labs](http://sunlightlabs.github.io/)
 
 ## To Do: ##
 
