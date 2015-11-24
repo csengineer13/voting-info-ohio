@@ -35,10 +35,12 @@ var VmBase = (function() {
         //this.WindowLocation(window.location.pathname + window.location.hash);
     };
 
-    VmBase.prototype.setupBindings = function () { }
+    VmBase.prototype.setupBindings = function() {};
+
     VmBase.prototype.mapInitData = function (data) {
-        ko.mappng.fromJS(data, data.KOMapping, this);
+        ko.mapping.fromJS(data, data.KOMapping, this);
     };
+
     VmBase.prototype.setNewItem = function () {
         console.log(this.ItemDetail);
         //this.NewItemDetail = mapper.toJs(this.ItemDetail);
