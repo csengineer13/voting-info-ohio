@@ -1,0 +1,21 @@
+{
+  "name": "vote-app",
+  "version": "0.0.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "css-utils": "~0.2.3",
+    "modular-scale": "~2.0.7",
+    "normalize-css": "~3.0.2",
+    "neat": "~1.7.1",
+    "jquery-smooth-scroll": "~1.5.5",
+    "drawDoughnutChart": "githiro/drawDoughnutChart",
+    "owl.carousel": "~2.0.0-beta.3"
+  }
+}
